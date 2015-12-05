@@ -1,0 +1,129 @@
+@font-face {
+    font-family: OpenSansL;
+    src: url('OpenSans-Light-webfont.eot');
+    src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Light-webfont.woff') format('woff'),
+         url('OpenSans-Light-webfont.ttf') format('truetype'),
+         url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.sect-body{
+	padding-top: 10px;
+}
+.works-list{
+	list-style: none;
+	padding: 0px;
+	padding-top: 28px;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+.works-list-item{
+	display: inline-block;
+	overflow: hidden;
+	width: 167px;
+	border: 1px solid #c3c3c3;
+	border-radius: 5px;
+	box-shadow:  -1px -1px 0px 0px #dcdbdb;
+	margin-left: 27px;
+	margin-bottom: 32px;
+	margin-bottom: 32px;
+	vertical-align: top;
+	text-align: center;
+}
+.work-img{
+	margin-bottom: 0px;
+	width: 100%;
+	height: 120px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.work-title{
+	border-top: 1px solid #c3c3c3;
+	font-size: 14px;
+	font-family: OpenSansSB;
+	background: #e8e8e8;
+	display: block;
+	width: 100%;
+	height: 35px;
+	margin-top: -5px;
+	margin-bottom: 0px;
+	line-height: 35px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.work-discript{
+	display: inline-block;
+	font-size: 12px;
+	font-family: OpenSansL;
+	margin: 2px 5px 7px 5px;
+
+}
+.smaller-pad{
+	padding: 10px;
+}
+.button{
+	background-image: -moz-linear-gradient( 90deg, rgb( 237, 235, 234 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb( 237, 235, 234 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
+	padding-bottom: 22px;
+}
+.button:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb( 194, 192, 192 ) 0%, rgb( 227, 225, 225 ) 86.694%, rgb( 232, 231, 231 ) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb( 194, 192, 192 ) 0%, rgb( 227, 225, 225 ) 86.694%, rgb( 232, 231, 231 ) 100%);
+  cursor: pointer;
+}
+
+.button-text{
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: OpenSansSB;
+}
+.button-text:before{
+	content: ' ';
+	display: block;
+	background: url(../img/polaroid.png) center no-repeat;
+	margin: 25px auto 7px;
+	width: 53px;
+    height: 54px;
+	border-radius: 50%;
+    background-color: #f7f7f7;
+    box-shadow: 0.5px 0.866px 0px 0px rgb( 255, 255, 255 ),
+    			-1px -1px 1px 0px #d1d1d1;
+
+}
+.button:hover .button-text:before{
+	background-color: #d7d7d7;
+}
+.content-section{
+	min-height: 840px;
+}
+
+.img-hover-box {
+position:relative;
+}
+.img-hover-box .textbox {
+width: 100%;
+height: 120px;
+position:absolute;
+top:0;
+left:0;
+-webkit-transform: scale(0);
+transform: scale(0);
+border-radius:5px;
+background-color: rgba(0,0,0,0.55);
+-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+color: white;
+}
+.img-hover-box:hover .textbox {
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+.text {
+padding-top: 35px;
+}
+.textbox {
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}

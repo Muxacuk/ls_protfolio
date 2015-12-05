@@ -2,6 +2,7 @@
 	font-family: OpenSansSB;
 	src: url(../fonts/OpenSans-Semibold.ttf);
 }
+
 @font-face{
 	font-family: OpenSans;
 	src: url(../fonts/OpenSans-Regular.ttf);
@@ -9,6 +10,9 @@
 *{
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+html,body{
+	min-height: 100vh;
 }
 body{
 	color: #727070;
@@ -18,7 +22,8 @@ body{
 	font-size: 16px;
 	font-family: OpenSans;
 	position: relative;
-	padding-bottom: 60px;
+	padding-bottom: 80px;
+
 }
 .wrap{
 	margin: auto;
@@ -31,9 +36,14 @@ header{
 	box-shadow: 0px 1px 0px 0px #dccb86;
 	background: url('/img/bg-head.png');
 }
-#logo{
+.logo{
+	height: 71px;
+}
+.logo-link{
+	display: inline-block;
 	height: 71px;
 	margin: 14px 0 9px 10px;
+	overflow: hidden;
 }
 .soc-buttons{
 	float: right;
@@ -165,135 +175,14 @@ li:first-child .mm-link {
 	margin: 0px;
 	padding: 0 0 5px;
 	line-height: 52px;
-	text-indent: 43px;
+	padding-left: 43px;
 	text-shadow: 0 1px #666565;
 }
 .sect-body{
 	padding:28px 30px 33px 30px;
 	color: #727070;
 }
-.photo{
-	float: left;
-	border-radius: 50%;
-	border: 9px solid white;
-	height: 151px;
-	box-shadow: 0 0 0 1px #cecccb;
-	width: 151px;
-	margin-left: 13px;
-	margin-top: 8px
-}
-.semibold{
-	font-family: OpenSansSB;
-}
 
-.sect-body p{
-	margin: 0px 30px 0px 198px;
-	font-size: 14px;
-	line-height: 25px;
-}
-.sect-body>span{
-	margin: 0px 0px 20px 35px;
-	line-height: 25px;
-	font-size: 14px;
-}
-.sect-body>.skillmargin{
-	line-height: 47px;
-}
-.skills{
-	display: inline-block;
-	width: 240px;
-	vertical-align: top;
-	margin-top: 12px;
-	margin-bottom: 0px;
-}
-.skill{
-	white-space: nowrap;
-	background: url(../img/skill-label.png);
-	background-repeat:  no-repeat;
-	border: 1px solid #cdcccc;
-	border-radius: 3px;
-	padding: 1px 7px 1px 8px;
-	border-left: none;
-	position: relative;
-	margin-left: 10px;
-	font-size: 10px;
-	line-height: 25px;
-    background-image: -moz-linear-gradient( 90deg, rgb( 233, 230, 228 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb( 233, 230, 228 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
-    box-shadow: 0px 2px 3px -2px rgba( 9, 9, 9,0.3 );
-}
-.skill:before{
-	display: block;
-	content: "";
-	width:9px;
-	height: 25px;
-	position: absolute;
-	left: -6px;
-	top: -4px;
-	background: url(../img/spritesheet.png);
-	background-position: -223px -83px;
-	background-repeat:  no-repeat;
-}
-/*-------------------------------------------------Prew Job--------------------------*/
-.smaller-padding{
-	padding: 20px;
-}
-.sub-sect{
-	padding: 20px;
-	position: relative;
-}
-
-.sub-sect:not(:first-child):before{
-	display: block;
-	content: " ";
-	height: 2px;
-	position: relative;
-	width: 560px;
-	top: -20px;
-	box-shadow: 0 0 1px 1px #fafaf9;
-	background-image: linear-gradient(#dbdbda,#edeceb);
-}
-.circle-img{
-	float: left;
-	height: 55px;
-	width: 55px;
-	background-image: url(../img/spritesheet.png);
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	background-color: #f7f7f7;
-  	box-shadow: 0.5px 0.866px 0px 0px rgb( 255, 255, 255 ),
-  				-1px -1px 0 0 #d9d8d8;
-	position: absolute;
-	top: 50%;
-	margin-top: -27px;
-}
-.case{
-	background-position: -146px -1px;
-}
-.article-text-box{
-	margin-left: 95px;
-	margin-right: 0px;
-	padding-right: 10px;
-}
-.article-text-box>p{
-	margin: 0px;
-	font-size: .875em;
-	font-family: OpenSansSB;
-}
-
-.article-text-box>span{
-	margin: 0px;
-	font-size: .875em;
-}
-.school{
-	background-position: -205px -5px;
-}
-.hight{
-	background-position: -32px -170px;
-}
-.loftschool{
-	background-position: -143px -61px;
-}
 /*-----------------------------------Contacts---------------*/
 .contacts{
 	overflow: hidden;
@@ -317,7 +206,7 @@ li:first-child .mm-link {
     width: 250px;
     display: block;
     padding: 9px;
-    text-indent: 65px;
+   	padding-left: 65px;
     font-size: .875em;
     text-decoration: none;
     position: relative;
@@ -333,27 +222,25 @@ li:first-child .contact-link {
 	height: 40px;
 	width: 40px;
 	top: 0px;
+	background-image: url(../img/spritesheet.png);
 	left: 0px;
+	top: 50%;
+	margin-top: -20px;
 }
 .contact-link:before{
-	background-image: url(../img/spritesheet.png);
 	background-position: -103px -97px;
-	top: 0px;
 	left: 46px;
 	width: 15px;
 }
 .mail:after{
-	background-image: url(../img/spritesheet.png);
 	background-position: -83px -142px;
 
 }
 .tel:after{
-	background-image: url(../img/spritesheet.png);
 	background-position: -1px -137px;
 }
 
 .skype:after{
-	background-image: url(../img/spritesheet.png);
 	background-position: -39px -139px;
 }
 
@@ -363,11 +250,12 @@ li:first-child .contact-link {
     background-image: -webkit-linear-gradient( 90deg, rgb( 220, 177, 93 ) 0%, rgb( 244, 204, 126 ) 89.746%);
     box-shadow: 0px 2px 1px 0px rgb( 9, 9, 9 );
     margin: 0px;
-    padding: 9px;
+    padding: 7px;
     text-indent: 20px;
     text-shadow: 0.5px 0.866px 0px rgba( 255, 255, 255, .5);
     color: rgb( 208, 152, 44 );
-    border: 1px solid rgba(202,161,80, .5)
+    border: 1px solid rgba(202,161,80, .5);
+    font-size: 20px;
 }
 .contact-link:hover {
 	background-image: -webkit-linear-gradient(bottom, rgba( 224, 197, 145, .2) 0%, rgb( 251, 249, 249 ) 100%);
@@ -379,6 +267,7 @@ footer{
 	height: 60px;
 	background-color: #f7f7f7;
 	position: absolute;
+
 	bottom: 0px;
 	width: 100%;
 	text-align: center;
