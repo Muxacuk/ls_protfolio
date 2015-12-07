@@ -16,18 +16,26 @@
 .semibold{
 	font-family: OpenSansSB;
 }
-
-.sect-body p{
-	margin: 0px 30px 0px 198px;
+.sect-body:after{
+	clear: both;
+	content: " ";
+	display: block;
+}
+.text-box{
+	float: right;
+	width: 390px;
+}
+.text-box p{
+	margin: 0px;
 	font-size: 14px;
 	line-height: 25px;
 }
-.sect-body>span{
-	margin: 0px 0px 20px 35px;
+.text-box span{
+	margin-bottom:20px;
 	line-height: 25px;
 	font-size: 14px;
 }
-.sect-body>.skillmargin{
+.sect-body .skillmargin{
 	line-height: 47px;
 }
 .skills{

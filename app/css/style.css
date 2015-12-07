@@ -58,10 +58,12 @@ header{
 }
 .logo{
 	height: 71px;
+
 }
 .logo-link{
 	display: inline-block;
 	height: 71px;
+	width: 100px;
 	margin: 14px 0 9px 10px;
 	overflow: hidden;
 }
@@ -228,6 +230,8 @@ li:first-child .mm-link {
     text-decoration: none;
     position: relative;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 li:first-child .contact-link {
 	border: 1px solid rgb( 214, 213, 211 );
