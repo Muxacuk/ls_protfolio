@@ -33,9 +33,10 @@
 	border: 1px solid #d6d5d3;
 	font-size: 12px;
 	text-indent: 10px;	
+	position: relative;
 }
 .feedback-form textarea{
-	width: 100%;
+	width: 400px;
 	resize: none;
 	padding-top: 10px;
 }
@@ -49,9 +50,8 @@
 }
 .feedback-form .code-in{
 	float: right;
-	margin-right: -3px;
-	margin-top: 20px;
 	height: 32px;
+	margin-top: 25px;
 }
 .feedback-form .button{
 	padding: 2px;
@@ -76,7 +76,6 @@
     background-image: -o-linear-gradient(bottom, rgb( 67, 183, 150 ) 0%, rgb( 128, 232, 203 ) 100%);
     background-image: linear-gradient(bottom, rgb( 67, 183, 150 ) 0%, rgb( 128, 232, 203 ) 100%);
     border: 1px solid rgba(150, 159, 132, .3);
-
 	margin-left: 30px;
 }
 .feedback-form .submit:hover{
@@ -116,4 +115,49 @@
 	color: #eeedec;
 	text-shadow: 1px 1px #656a68;
 }
-
+.code{
+	line-height: 100px;
+	vertical-align: middle;
+}
+.error{
+	position: relative;
+	display: inline-block;
+}
+.marg-b25{
+	margin-top: 25px;
+	float: right;
+}
+.marg-b25 .code-in{
+	margin-top: 0px;
+}
+.error-message{
+	line-height: 20px;
+	font-size: 12px;
+	position: absolute;
+    background-image: -webkit-linear-gradient(bottom, rgb( 211, 118, 84 ) 0%, rgb( 243, 162, 135 ) 89.746%);
+	background-image: -o-linear-gradient(bottom, rgb( 211, 118, 84 ) 0%, rgb( 243, 162, 135 ) 89.746%);
+	background-image: linear-gradient(bottom, rgb( 211, 118, 84 ) 0%, rgb( 243, 162, 135 ) 89.746%);
+	padding: 1px 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.error:after{
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border: 5px solid transparent;
+	display: block;
+	content: " ";
+	top: 50%;
+	margin-top: -3px;
+}
+.error-r:after{
+	border-right: 5px solid rgb( 233, 152, 125 );
+	right: -5px;
+}
+.error-l:after{
+	border-left: 5px solid rgb( 233, 152, 125 );
+	left: -5px;
+}
