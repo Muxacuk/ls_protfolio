@@ -93,7 +93,6 @@
     background-color: #f7f7f7;
     box-shadow: 0.5px 0.866px 0px 0px rgb( 255, 255, 255 ),
     			-1px -1px 1px 0px #d1d1d1;
-
 }
 .button:hover .button-text:before{
 	background-color: #d7d7d7;
@@ -263,6 +262,15 @@
 	position: relative;
 	display: inline-block;
 	left: 12px;
+	margin: 5px auto 5px;
+}
+.error .input{
+	margin: 3px 0 0 0;
+}
+.error .about-proj-text{
+	width: 320px;
+	display: block;
+	margin: 0px auto -10px;
 }
 .error-message{
 	line-height: 20px;

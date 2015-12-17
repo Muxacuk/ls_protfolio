@@ -4,7 +4,8 @@
     "Muxacuk <m-izmaylov@inbox.ru>"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "normalize-css": "normalize.css#~3.0.3"
+    "jquery": "1.8.3",
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery-placeholder": "~2.3.1"
   }
 }
