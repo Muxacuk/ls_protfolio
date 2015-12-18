@@ -53,10 +53,13 @@
 	height: 32px;
 	margin-top: 25px;
 }
+.input-box{
+	height: 82px;
+}
 .feedback-form .button{
 	padding: 2px;
-	width: 120px;
-	height: 40px;
+	width: 125px;
+	height: 38px;
 	border-radius: 5px;
 	border: 1px solid #d6d5d3;
 	font-size: 14px;
@@ -123,6 +126,10 @@
 	position: relative;
 	display: inline-block;
 }
+.error input , .error textarea{
+	border: solid 1px red;
+	box-shadow: 0 0 5px 0px red;
+}
 .marg-b25{
 	margin-top: 25px;
 	float: right;
@@ -133,6 +140,7 @@
 .error-message{
 	line-height: 20px;
 	font-size: 12px;
+	background-color: rgb( 243, 162, 135 );
 	position: absolute;
     background-image: -webkit-linear-gradient(bottom, rgb( 211, 118, 84 ) 0%, rgb( 243, 162, 135 ) 89.746%);
 	background-image: -o-linear-gradient(bottom, rgb( 211, 118, 84 ) 0%, rgb( 243, 162, 135 ) 89.746%);
@@ -141,7 +149,7 @@
 	border-radius: 5px;
 	white-space: nowrap;
 	top: 50%;
-	transform: translateY(-50%);
+	margin-top: -9px;
 }
 .error:after{
 	position: absolute;

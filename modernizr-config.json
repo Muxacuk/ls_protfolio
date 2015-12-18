@@ -18,6 +18,7 @@
   ],
   "feature-detects": [
     "test/css/backgroundsizecover",
-    "test/css/gradients"
+    "test/css/gradients",
+    "test/forms/placeholder"
   ]
 }
