@@ -46,7 +46,7 @@
 			</ul>
 		</nav>
 		<div class="contacts">
-			<h4 class="contacts-title">Контакты</h4>
+			<p class="contacts-title">Контакты</p>
 			<ul>
 				<li>
 					<a href="mailto:m-izmaylov@inbox.ru" class="contact-link mail">m-izmaylov@inbox.ru</a>
@@ -145,30 +145,30 @@
 		</div>
 	</footer>
 <div class="popup">
-	<div class="cover">
-		<div class="popup-body">
-			<form action="#" class="popup-form" id="add_project_form">
-				<button type="reset" id="exit" class="exit-button"></button>
-				<label for="proj_name">Название проекта</label>
-				<input class="input" type="text" id="proj_name" name="proj_name" placeholder="Введите название">
-				<label for="in_img">Картинка проекта
+	<div class="cover"></div>
+	<div class="popup-body">
+		<form action="#" class="popup-form" id="add_project_form">
+			<button type="reset" id="exit" class="exit-button"></button>
+			<label for="proj_name">Название проекта</label>
+			<input class="input" type="text" id="proj_name" name="proj_name" placeholder="Введите название">
+			<label for="in_img">
+				<span>Картинка проекта</span>
 				<div class="fake-input input">
-					Загрузите изображение
+					<span>Загрузите изображение</span>
 					<div class="cloud-box"></div>
 				</div>
 				<input type="file" class="in_img" id="in_img" name="in_img">
-				</label>
-				<label for="proj_url">URL проекта</label>
-				<input class="input" type="text" id="proj_url" name="proj_url" placeholder="Добавьте ссылку">
-				<label for="proj_descript">Описание</label>
-				<textarea id="proj_descript" name="proj_descript" cols="38" rows="6" placeholder="Пара слов о Вашем проекте"  class="about-proj-text" ></textarea>
-				<button type="submit" class="submit">Добавить</button>
-			</form>
-		</div>
+			</label>
+			<label for="proj_url">URL проекта</label>
+			<input class="input" type="text" id="proj_url" name="proj_url" placeholder="Добавьте ссылку">
+			<label for="proj_descript">Описание</label>
+			<textarea id="proj_descript" name="proj_descript" cols="38" rows="6" placeholder="Пара слов о Вашем проекте"  class="about-proj-text" ></textarea>
+			<button type="submit" class="submit">Добавить</button>
+		</form>
 	</div>
 </div>
-</body>
 <script type="text/javascript" src="bower/jquery/jquery.js"></script>
 <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 <script src="js/main.js"></script>
+</body>
 </html>

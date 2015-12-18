@@ -136,8 +136,6 @@
 	top: 0px;
 	display: none;
 	left: 0px;
-	background-color: rgba(0,0,0,.3);
-	z-index: 2;
 	width: 100vw;
 	height: 100vh;
 }
@@ -146,14 +144,20 @@
 	top: 50%;
 	left: 50%;
 	width: 367px;
-	height: 462px;
 	margin: -231px 0 0 -183px;
 	background-color: #f1efee;
 	border-radius: 5px;
 	padding: 10px;
 	border: 1px solid #cacaca;
 }
+.cover{
+	z-index: 11;
+	background-color: rgba(0,0,0,.3);
+	width: 100vw;
+	height: 100vh;
+}
 .popup-form{
+	z-index: 12;
 	position: relative;
 	padding-top: 7px;
 }
@@ -185,6 +189,23 @@
 	padding: 10px;
 	background: white;
 	cursor: pointer;
+}
+.success{
+  border-width: 1px;
+  border-color: rgb( 73, 187, 123 );
+  border-style: solid;
+  border-radius: 4px;
+  background-color: #bde2cc;
+  width: 318px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+.success span{
+	font-size: 16px;
+}
+.success p{
+	font-size: 14px;
 }
 .cloud-box{
 	background-image: -webkit-linear-gradient(bottom, rgb( 233, 230, 229 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
