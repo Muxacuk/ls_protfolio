@@ -197,6 +197,7 @@
   border-radius: 4px;
   background-color: #bde2cc;
   width: 318px;
+  height: auto;
   padding: 5px;
   line-height: 16px;
 }
@@ -332,4 +333,8 @@
 .error-l:after{
 	border-left: 5px solid rgb( 233, 152, 125 );
 	left: -5px;
+}
+.error .input , .error textarea{
+	border: solid 1px red;
+	box-shadow: 0 0 5px 0px red;
 }

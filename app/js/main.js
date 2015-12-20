@@ -1,20 +1,28 @@
 innerMetods = (function(){
 	return {
 		send: function (form) {
-			$(form).html('<button type="reset" id="exit" class="exit-button"></button><div class="success"><span>Ура!!!</span><p>Проект успешно добавлен</p></div>');
 			$.ajax({
-				action: "addproj.php",
+				action: "",
 				metod: 'post',
 				data: $(form).serialize(),
 				success: function (text) {
 					if(text === 'Принято')
-						1//выводим сообщение об успехе
+						success();
 				},
 				error: function (error) {
 					console.log(error);
 					//выводим сообщение об ошибке
 				}
 			});
+
+			function success(){
+				successMessage = $('</button><div class="success input"><span>Ура!!!</span><p>Проект успешно добавлен</p></div>');
+				successMessage.insertAfter('#exit');
+				$(form).children('input,textarea').each(function(){
+					this.value="";
+				});
+			}
+			success();
 		},
 
 		showError: function (el,className,position,message){
@@ -40,6 +48,12 @@ innerMetods = (function(){
 				label.siblings('.error-message').remove();
 				$(this).focus();
 			})
+		},
+
+		removeErrors: function(){
+			$($('.error').children()).unwrap('div')
+			$('.error-message').remove();
+			$('input, textarea').off('keyup');
 		}
 	}
 })();
@@ -49,21 +63,29 @@ addProjectModule = (function(){
 		addButton = $('#add-project'),
 		exit = $('#exit, .cover'),
 		label = $('.fake-input');
+		formBody = $('#add_project_form').children();
 
 	function _setUpListenersForAddProject(){
+
 		addButton.on('click', function(){
+			$(add_project_form).children().show();
+			$('.success').remove();
+			innerMetods.removeErrors();
+			$('input, textarea').placeholder();
 			popup.fadeIn();
 		});
+
 		exit.on('click',function(e){
 			popup.fadeOut();
 		});
-		$(add_project_form).on('submit',function(){
+
+		$(add_project_form).on('submit',function(e){
 			if(_validateAddProjectForm()){ 
+				formBody.hide();
+				exit.show();
 				innerMetods.send(this);
-				$('#exit').on('click',function(e){
-					$('.popup').fadeOut();
-				});
 			}
+			e.preventDefault();
 			return false;
 		});
 
@@ -73,29 +95,25 @@ addProjectModule = (function(){
 	}
 
 	function _validateAddProjectForm(){
-		var valid = true;
-
 		if((add_project_form.proj_name.value === '' || (add_project_form.proj_name.value ===  "Введите название" && !Modernizr.placeholder)) && !$(add_project_form.proj_name).parent().hasClass('error')){
 			innerMetods.showError(add_project_form.proj_name,'error-l','right','введите название');
 			innerMetods.setUpListenersForInput(add_project_form.proj_name);
-			valid = false;
 		}
 		if(add_project_form.in_img.value === '' && !$('.fake-input').parent().hasClass('error')){
 			innerMetods.showError($('.fake-input'),'error-l','right','добавьте картинку');
 			innerMetods.setUpListenersForInputFile(add_project_form.in_img);
-			valid = false;
 		}
 		if((add_project_form.proj_url.value === '' || (add_project_form.proj_url.value === 'Добавьте ссылку'  && !Modernizr.placeholder)) && !$(add_project_form.proj_url).parent().hasClass('error')){
 			innerMetods.showError(add_project_form.proj_url,'error-l','right', 'введите адрес');
 			innerMetods.setUpListenersForInput(add_project_form.proj_url);
-			valid = false;
 		}
 		if((add_project_form.proj_descript.value === '' || (add_project_form.proj_descript.value ===  "Пара слов о Вашем проекте" && !Modernizr.placeholder)) && !$(add_project_form.proj_descript).parent().hasClass('error')){
 			innerMetods.showError(add_project_form.proj_descript,'error-l','right','введите описание');
 			innerMetods.setUpListenersForInput(add_project_form.proj_descript);
-			valid = false;
 		}
-		return valid;
+		if($('.error')[0] != undefined )
+			return false;
+		return true
 	}
 
 	return {
@@ -114,37 +132,43 @@ feedbackFormValidateModule = (function(){
 			if(_validateFeedback()) innerMetods.send();
 				return false;
 		});
+
+		$('.reset').on('click',function () {
+			innerMetods.removeErrors();
+			$('input, textarea').placeholder();
+		})
 	}
 	function _validateFeedback(){
-		var valid = true;
 
 		if((feedback.user_name.value === '' || (feedback.user_name.value === "Как к Вам обращаться" && !Modernizr.placeholder)) && !$(feedback.user_name).parent().hasClass('error')){
 			innerMetods.showError(feedback.user_name,'error-l','right','введите имя');
 			innerMetods.setUpListenersForInput(feedback.user_name);
-			valid = false;
 		}
+
 		if((feedback.email.value === '' || (feedback.email.value === 'Куда мне писать' && !Modernizr.placeholder))  && !$(feedback.email).parent().hasClass('error')){
 			innerMetods.showError(feedback.email,'error-r','left','введите e-mail');
 			innerMetods.setUpListenersForInput(feedback.email);
-			valid = false;
 		}
+
 		if((feedback.message.value === '' || (feedback.message.value === 'Кратко в чем суть' && !Modernizr.placeholder))  && !$(feedback.message).parent().hasClass('error')){
 			innerMetods.showError(feedback.message,'error-l textarea','right', 'ваш вопрос');
 			innerMetods.setUpListenersForInput(feedback.message);
-			valid = false;
 		}
+
 		if((feedback.code.value === '' || (feedback.code.value === 'Введите код' && !Modernizr.placeholder))  && !$(feedback.code).parent().hasClass('error')){
 			innerMetods.showError(feedback.code,'error-r marg-b25','left','код капчи');
 			innerMetods.setUpListenersForInput(feedback.code);
-			valid = false;
 		}
-		return valid;
-	}
 
+		if($('.error')[0] != undefined )
+			return false;
+		return true
+	}
 
 	return {
 		init: function(){
 			_setUpListenersForFeedback();
+			$('input, textarea').placeholder();
 		}
 	}
 })();
@@ -153,5 +177,3 @@ feedbackFormValidateModule = (function(){
 		feedbackFormValidateModule.init();
 	else
 		addProjectModule.init();
-
-	$('input, textarea').placeholder();
