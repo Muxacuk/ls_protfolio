@@ -21,6 +21,7 @@ innerMetods = (function(){
 				$(form).children('input,textarea').each(function(){
 					this.value="";
 				});
+				$('.fake-input').html('Загрузите изображение <i class="cloud-box"></i>');
 			}
 			success();
 		},
@@ -40,13 +41,11 @@ innerMetods = (function(){
 				$(this).off('keyup');
 			})
 		},
-
 		setUpListenersForInputFile: function (input){
 			$(input).on('change', function(){
 				var label = $('.fake-input');
 				label.unwrap('div');
 				label.siblings('.error-message').remove();
-				$(this).focus();
 			})
 		},
 
@@ -79,6 +78,14 @@ addProjectModule = (function(){
 			popup.fadeOut();
 		});
 
+		$('#exit').on('click',function(e){
+			$('.fake-input').html('Загрузите изображение <div class="cloud-box"></div>');
+		});
+		
+		$('.in_img').on('change', function(){
+				var label = $('.fake-input');
+				$('.fake-input').html((event.target.value || 'Загрузите изображение')+'<div class="cloud-box"></div>');
+			})
 		$(add_project_form).on('submit',function(e){
 			if(_validateAddProjectForm()){ 
 				formBody.hide();
@@ -89,9 +96,6 @@ addProjectModule = (function(){
 			return false;
 		});
 
-		$(add_project_form.in_img).on('change', function(){
-			label.html(($(event.target).val()||'Загрузите изображение')+'<div class="cloud-box"></div>');
-		});
 	}
 
 	function _validateAddProjectForm(){
