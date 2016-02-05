@@ -2,6 +2,7 @@
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Михаил Измайлов</title>
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -12,56 +13,28 @@
 	<script src="js/modernizr.js"></script>
 </head>
 <body>
-	<header>
-		<div class="wrap">
+	<header class="header">
+		<div class="wrap header__wrap">
 			<a href="index.html" class="logo-link logo-block"><img src="/img/logo.png" alt="Логотип" class="logo"></a>
 			<ul class="soc-buttons">
-				<li class="soc-but ">
+<!-- 				<li class="soc-but ">
 					<a href="" class="facebook" target="_blank">facebook</a>
-				</li>
+				</li> -->
 				<li class="soc-but">
-					<a href="" class="vk" target="_blank">vk</a>
+					<a href="https://vk.com/id151078387" class="vk" target="_blank">vk</a>
 				</li>
-				<li class="soc-but">
+<!-- 				<li class="soc-but">
 					<a href="" class="tw" target="_blank">tw</a>
-				</li>
+				</li> -->
 				<li class="soc-but">
-					<a href="" class="gh" target="_blank">gh</a>
+					<a href="https://github.com/Muxacuk" class="gh" target="_blank">gh</a>
 				</li>
 			</ul>
 		</div>
 	</header>
 
 <div class="wrap main-block">
-	<aside class="aside">
-		<nav class="main-nav">
-			<ul class="main-menu">
-				<li class="mm-item">
-					<a href="index.html" class="active mm-link ">Обо мне</a>
-				</li>
-				<li class="mm-item">
-					<a href="myworks.html" class="mm-link">Мои Работы</a>
-				</li>
-				<li class="mm-item">
-					<a href="feedback.html" class="mm-link">Обратная связь</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="contacts">
-			<p class="contacts-title">Контакты</p>
-			<ul>
-				<li>
-					<a href="mailto:m-izmaylov@inbox.ru" class="contact-link mail">m-izmaylov@inbox.ru</a>
-				</li>
-				<li>
-					<a href="tel:0637831249" class="contact-link tel">+380637831249</a>
-				</li>
-				<li>
-					<a href="callto:m-izmaylov" class="contact-link skype">m-izmaylov</a>
-				</li>
-			</ul>
-		</div>
-	</aside>
+	
 	<main class="content">
 		<section class="content-section">
 			<div class="section-header">
@@ -80,8 +53,9 @@
 					<ul class="skills">
 						<li class="skill">HTML</li>
 						<li class="skill">CSS</li>
-						<li class="skill">JAVASCRIPT</li>
-						<li class="skill">LESS</li>
+						<li class="skill">JavaScript</li>
+						<li class="skill">SASS</li>
+						<li class="skill">Jade</li>
 						<li class="skill">SQL</li>
 						<li class="skill">FoxPro</li>
 					</ul>
@@ -121,20 +95,56 @@
 				<div class="sub-sect">
 					<div class="article-text-box loftschool">
 						<p>Курсы loftschol.ru</p>
-						<span>Ноябрь 2015 - по настоящее время</span>
+						<span>Ноябрь 2015 - Январь 2016</span>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
+	<aside class="aside">
+		<nav class="main-nav">
+			<a href="#" class="main-nav__show-trigger">
+				<i class="line-icon"></i>
+				<i class="line-icon"></i>
+				<i class="line-icon"></i>
+			</a>
+			<ul class="main-menu">
+				<li class="mm-item">
+					<a href="index.html" class="active mm-link ">Обо мне</a>
+				</li>
+				<li class="mm-item">
+					<a href="myworks.html" class="mm-link">Мои Работы</a>
+				</li>
+<!-- 				<li class="mm-item">
+					<a href="feedback.html" class="mm-link">Обратная связь</a>
+				</li> -->
+			</ul>
+		</nav>
+		<div class="contacts">
+			<p class="contacts-title">Контакты</p>
+			<ul class="contacts__list">
+				<li class="contacts__list-item">
+					<a href="mailto:m-izmaylov@inbox.ru" class="contact-link mail">m-izmaylov@inbox.ru</a>
+				</li>
+				<li class="contacts__list-item">
+					<a href="tel:0637831249" class="contact-link tel">+380637831249</a>
+				</li>
+				<li class="contacts__list-item">
+					<a href="callto:m-izmaylov" class="contact-link skype">m-izmaylov</a>
+				</li>
+			</ul>
+		</div>
+	</aside>
 </div>
 	<footer>
 		<div class="wrap footer-box">
-		<aside class="aside">
+		<aside class="aside footer__aside">
 			<a href="#in">ВХОД</a>
 		</aside>
 			<span class="footer-text">&copy; Это мой сайт, пожалуйстане копируйте и не воруйте его. </span>
 		</div>
 	</footer>
+	<script type="text/javascript" src="bower/jquery/jquery.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

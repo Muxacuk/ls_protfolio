@@ -76,20 +76,6 @@
 	background-position: -223px -83px;
 	background-repeat:  no-repeat;
 }
-@media screen and (max-width:670px){
-	.photo-box{
-		margin: auto;
-		float: none;
-	}
-	.text-box{
-		width: 100%;
-		margin-top: 20px;
-	}
-	.skills{
-		margin-top: -10px;
-		width: 100%;
-	}
-}
 /*-------------------------------------------------Prew Job--------------------------*/
 .smaller-padding{
 	padding: 20px;
@@ -104,7 +90,7 @@
 	content: " ";
 	height: 2px;
 	position: relative;
-	width: 100%;
+	width: 560px;
 	top: -20px;
 	box-shadow: 0 0 1px 1px #fafaf9;
 	background-image: linear-gradient(#dbdbda,#edeceb);

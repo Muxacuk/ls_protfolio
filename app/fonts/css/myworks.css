@@ -13,7 +13,6 @@
 .sect-body{
 	padding-top: 10px;
 }
-
 .works-list{
 	list-style: none;
 	padding: 0px;
@@ -68,7 +67,6 @@
 	padding: 10px;
 }
 .button{
-	display: none;
 	background-image: -moz-linear-gradient( 90deg, rgb( 237, 235, 234 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb( 237, 235, 234 ) 0%, rgb( 251, 249, 249 ) 94.238%, rgb( 255, 255, 255 ) 100%);
 	padding-bottom: 22px;
@@ -132,19 +130,6 @@
 	-webkit-transition: all 0.7s ease;
 	transition: all 0.7s ease;
 }
-@media screen and (max-width:670px){
-	.works-list{	
-		width: 100%;
-		text-align: center;
-
-	}
-	.works-list-item{
-		margin-left: 0px;
-	}
-	.content-section{
-		min-height: 0px;
-	}
-}
 /*-------------------------popup------------------*/
 
 .popup{
@@ -166,7 +151,6 @@
 	padding: 10px;
 	border: 1px solid #cacaca;
 }
-
 .cover{
 	z-index: 11;
 	background-color: rgba(0,0,0,.3);
@@ -278,7 +262,6 @@
 	padding: 8px 27px;
 	font-size: 14px;
 	display: block;
-	margin: 10px auto;
 	color: #467366;
 	text-shadow: 1px 1px #dcece6;
     background-image: -webkit-linear-gradient(bottom, rgb( 67, 183, 150 ) 0%, rgb( 128, 232, 203 ) 100%);
@@ -290,6 +273,7 @@
 	background-origin: border-box;
 	font-family: OpenSansSB;
 	background-color: rgb( 108, 212, 183 );
+	margin: 10px 110px;
 }
 .submit:hover{
 	background-image: -webkit-linear-gradient(bottom, rgb( 58, 160, 135 ) 0%, rgb( 95, 220, 189 ) 100%);
@@ -355,18 +339,4 @@
 .error .input , .error textarea{
 	border: solid 1px red;
 	box-shadow: 0 0 5px 0px red;
-}
-@media screen and (max-width:670px){
-	.popup-body{
-		width: 90%;
-		position: absolute;
-		margin: 0px;
-		top: 10px;
-		left: 5%;
-	}
-	.input, .about-proj-text{
-		padding: 10px;
-		width: 100%;
-
-	}
 }

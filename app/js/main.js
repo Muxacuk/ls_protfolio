@@ -84,7 +84,7 @@ addProjectModule = (function(){
 		
 		$('.in_img').on('change', function(){
 				var label = $('.fake-input');
-				$('.fake-input').html((event.target.value || 'Загрузите изображение')+'<div class="cloud-box"></div>');
+				$('.fake-input').html((add_project_form.in_img.value || 'Загрузите изображение')+'<div class="cloud-box"></div>');
 			})
 		$(add_project_form).on('submit',function(e){
 			if(_validateAddProjectForm()){ 
@@ -176,8 +176,26 @@ feedbackFormValidateModule = (function(){
 		}
 	}
 })();
+responsive = (function () {
+	returned = {};
+	function setUpListeners (){
+		$('.main-nav').on('click', function (event) {
+			$(this)
+				.parent()
+				.find('.main-menu')
+				.toggleClass('main-menu__active');
+	});
+	};
+	returned.init = function() {
+		setUpListeners();
+	}
+	return returned;
+})();
 //-------------------------------------init-------------------------------------------------------
 	if(document.getElementById('feedback') != null)
 		feedbackFormValidateModule.init();
-	else
+	else if(document.getElementsByClassName('popup')[0] != null) 
 		addProjectModule.init();
+
+	responsive.init();
+	console.log('init');
