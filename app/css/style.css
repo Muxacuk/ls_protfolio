@@ -48,6 +48,11 @@ body{
 		padding-bottom: 50px;
 	}
 }
+@media screen and (max-width:670px){
+	body{
+		padding-bottom: 100px;
+	}
+}
 .wrap{
 	margin: auto;
 	width: 1200px;
@@ -100,6 +105,14 @@ body{
 @media screen and (max-width:1200px){
 	.soc-buttons{
 		margin-top: 14px;
+	}
+}
+@media only screen and (max-width:670px){
+	.soc-buttons{
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 .soc-but {
